@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>hyperlink — mask any link</title>
+<meta name="description" content="Cloak any URL behind a Roblox-looking link. Built for Discord. Built by BLADE." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-layer grid"></div>
+  <div class="bg-layer noise"></div>
+  <div class="bg-layer stars stars-1"></div>
+  <div class="bg-layer stars stars-2"></div>
+  <div class="bg-layer stars stars-3"></div>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+
+  <header class="bar">
+    <div><span class="dot"></span><span>hyperlink // blade</span></div>
+    <a class="pill" href="https://discord.gg/ENmTX2BVsV" target="_blank" rel="noreferrer">join blade</a>
+  </header>
+
+  <main class="wrap">
+    <p class="eyebrow">hyperlink // discord link cloaker</p>
+    <h1>Cloak the link. <span class="italic">Land the click.</span></h1>
+    <p class="lede">Drop a destination. Pick a mask. Get a Discord-ready hyperlink that reads Roblox on hover and goes wherever you aim it. Surgical.</p>
+
+    <section class="card">
+      <div class="console-row">
+        <span class="d on"></span><span class="d"></span><span class="d"></span>
+        <span class="label">blade.console</span>
+      </div>
+
+      <div class="step-label"><span>01</span><span>—</span><span>Mask</span></div>
+      <div class="grid3" id="presets"></div>
+      <p class="mask-line">mask → <span id="maskUrl"></span></p>
+
+      <div class="section">
+        <div class="step-label"><span>02</span><span>—</span><span>Payload</span></div>
+        <div class="input-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          <input id="destination" type="text" placeholder="https://your-real-link.com/whatever" spellcheck="false" autocomplete="off" />
+        </div>
+        <p class="hint">Where the click actually lands.</p>
+      </div>
+
+      <div class="section">
+        <div class="step-label"><span>03</span><span>—</span><span>Cloak</span></div>
+        <div class="grid3" id="services"></div>
+      </div>
+
+      <button id="forge" class="cta">
+        <span id="ctaLabel">Cloak link</span>
+        <svg id="ctaArrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+
+      <p id="err" class="err" style="display:none"></p>
+
+      <div id="result" class="result" style="display:none">
+        <div class="result-head">
+          <span class="tag">ready to paste</span>
+          <button id="copy" class="copy">
+            <svg id="copyIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span id="copyLabel">copy</span>
+          </button>
+        </div>
+        <pre id="markdown" class="md"></pre>
+        <p class="short">short → <b id="shortUrl"></b></p>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="stat"><div class="n">03</div><div class="l">masks</div></div>
+      <div class="stat"><div class="n">03</div><div class="l">cloaks</div></div>
+      <div class="stat"><div class="n">∞</div><div class="l">targets</div></div>
+    </div>
+
+    <a class="runwith" href="https://discord.gg/ENmTX2BVsV" target="_blank" rel="noreferrer">
+      <span class="line"></span>run with blade<span class="line"></span>
+    </a>
+  </main>
+
+  <div id="pop" class="pop hidden">
+    <div class="scrim" data-close></div>
+    <div class="box">
+      <button class="x" data-close aria-label="Close">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="icon">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+      </div>
+      <h2>Step inside BLADE.</h2>
+      <p>Fresh masks. New cloaks. Drops the public never sees. Roll with the cell or stay outside.</p>
+      <a class="join" href="https://discord.gg/ENmTX2BVsV" target="_blank" rel="noreferrer" data-close>
+        Join BLADE
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <button class="later" data-close>not yet</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
